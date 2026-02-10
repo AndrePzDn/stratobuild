@@ -5,17 +5,7 @@ import { AdminUser } from 'src/authentication/entities/admin-user.entity';
 import { Model } from 'mongoose';
 import { AdminPassword } from 'src/authentication/entities/admin-password.entity';
 import { genSalt, hash } from 'bcrypt';
-
-interface PaginationQuery {
-  page?: number;
-  limit?: number;
-  sortBy?: string;
-  sortValue?: 'asc' | 'desc';
-  filter?: string;
-  equal?: string;
-  fields?: string;
-  q?: string;
-}
+import { PaginationQuery } from 'src/common/interfaces/pagination-query.interface';
 
 @Injectable()
 export class UserService {

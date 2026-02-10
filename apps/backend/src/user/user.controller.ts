@@ -13,6 +13,7 @@ import {
 import { CreateUserDto } from 'src/user/dto/create-user.dto';
 import { UserService } from './user.service';
 import { AuthGuard } from 'src/authentication/guards/auth.guard';
+import type { PaginationQuery } from 'src/common/interfaces/pagination-query.interface';
 
 @Controller('user')
 export class UserController {
@@ -27,7 +28,7 @@ export class UserController {
   @UseGuards(AuthGuard)
   @HttpCode(HttpStatus.OK)
   @Get()
-  findAll(@Query() query) {
+  findAll(@Query() query: PaginationQuery) {
     return this.userService.findAll(query);
   }
 
