@@ -10,6 +10,7 @@ import { UnitOfMeasurementsModule } from './unit-of-measurements/unit-of-measure
 import { MaterialsModule } from './materials/materials.module';
 import { LaborTypesModule } from './labor-types/labor-types.module';
 import { ToolsModule } from './tools/tools.module';
+import { LineItemsModule } from './line-items/line-items.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -28,6 +29,7 @@ import configuration from './config/configuration';
     MaterialsModule,
     LaborTypesModule,
     ToolsModule,
+    LineItemsModule,
   ],
   controllers: [],
   providers: [],
