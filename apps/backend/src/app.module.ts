@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
+import { ClientsModule } from './clients/clients.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -14,6 +15,7 @@ import configuration from './config/configuration';
     MongooseModule.forRoot(configuration().database.uri),
     AuthenticationModule,
     UserModule,
+    ClientsModule,
   ],
   controllers: [],
   providers: [],
