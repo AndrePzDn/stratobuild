@@ -12,12 +12,12 @@ import { BaseService } from './base.service';
 import { AuthGuard } from 'src/authentication/guards/auth.guard';
 import type { PaginationQuery } from '../interfaces/pagination-query.interface';
 
-export class BaseController<T> {
-  constructor(protected readonly service: BaseService<T>) {}
+export class BaseController<Schema, CreateDto, UpdateDto> {
+  constructor(protected readonly service: BaseService<Schema>) {}
 
   @UseGuards(AuthGuard)
   @Post()
-  create(@Body() dto: Partial<T>) {
+  create(@Body() dto: CreateDto) {
     return this.service.create(dto);
   }
 
@@ -35,7 +35,7 @@ export class BaseController<T> {
 
   @UseGuards(AuthGuard)
   @Patch(':id')
-  update(@Param('id') id: string, @Body() dto: Partial<T>) {
+  update(@Param('id') id: string, @Body() dto: UpdateDto) {
     return this.service.update(id, dto);
   }
 

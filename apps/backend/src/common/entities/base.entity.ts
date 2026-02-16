@@ -12,7 +12,4 @@ export class BaseEntity {
 
   @Prop({ default: true })
   enabled: boolean;
-
-  @Prop({ default: false })
-  deleted: boolean;
 }

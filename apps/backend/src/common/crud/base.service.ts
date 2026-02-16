@@ -2,10 +2,10 @@ import { NotFoundException } from '@nestjs/common';
 import { Model } from 'mongoose';
 import { PaginationQuery } from '../interfaces/pagination-query.interface';
 
-export class BaseService<T> {
-  constructor(protected readonly model: Model<T>) {}
+export class BaseService<Schema> {
+  constructor(protected readonly model: Model<Schema>) {}
 
-  async create(data: Partial<T>) {
+  async create(data) {
     const result = await new this.model(data).save();
 
     return {
@@ -78,7 +78,7 @@ export class BaseService<T> {
     };
   }
 
-  async update(id: string, data: Partial<T>) {
+  async update(id: string, data) {
     const result = await this.model
       .findOneAndUpdate({ _id: id, removed: false }, data, { new: true })
       .exec();
