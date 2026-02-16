@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { ClientsModule } from './clients/clients.module';
 import { ServiceTypesModule } from './service-types/service-types.module';
+import { ProjectTypesModule } from './project-types/project-types.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -18,6 +19,7 @@ import configuration from './config/configuration';
     UserModule,
     ClientsModule,
     ServiceTypesModule,
+    ProjectTypesModule,
   ],
   controllers: [],
   providers: [],
