@@ -8,6 +8,7 @@ import { ServiceTypesModule } from './service-types/service-types.module';
 import { ProjectTypesModule } from './project-types/project-types.module';
 import { UnitOfMeasurementsModule } from './unit-of-measurements/unit-of-measurements.module';
 import { MaterialsModule } from './materials/materials.module';
+import { LaborTypesModule } from './labor-types/labor-types.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -24,6 +25,7 @@ import configuration from './config/configuration';
     ProjectTypesModule,
     UnitOfMeasurementsModule,
     MaterialsModule,
+    LaborTypesModule,
   ],
   controllers: [],
   providers: [],
