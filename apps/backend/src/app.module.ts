@@ -7,6 +7,7 @@ import { ClientsModule } from './clients/clients.module';
 import { ServiceTypesModule } from './service-types/service-types.module';
 import { ProjectTypesModule } from './project-types/project-types.module';
 import { UnitOfMeasurementsModule } from './unit-of-measurements/unit-of-measurements.module';
+import { MaterialsModule } from './materials/materials.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -22,6 +23,7 @@ import configuration from './config/configuration';
     ServiceTypesModule,
     ProjectTypesModule,
     UnitOfMeasurementsModule,
+    MaterialsModule,
   ],
   controllers: [],
   providers: [],
