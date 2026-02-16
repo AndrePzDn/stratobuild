@@ -6,6 +6,7 @@ import { UserModule } from './user/user.module';
 import { ClientsModule } from './clients/clients.module';
 import { ServiceTypesModule } from './service-types/service-types.module';
 import { ProjectTypesModule } from './project-types/project-types.module';
+import { UnitOfMeasurementsModule } from './unit-of-measurements/unit-of-measurements.module';
 import configuration from './config/configuration';
 
 @Module({
@@ -20,6 +21,7 @@ import configuration from './config/configuration';
     ClientsModule,
     ServiceTypesModule,
     ProjectTypesModule,
+    UnitOfMeasurementsModule,
   ],
   controllers: [],
   providers: [],
